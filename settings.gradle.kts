@@ -1,14 +1,26 @@
 pluginManagement {
-//    resolutionStrategy {
-//        eachPlugin {
-//            if (requested.id.id == "com.android.library") {
-//                useModule("com.android.tools.build:gradle:${requested.version}")
-//            }
-//            if (requested.id.id == "com.android.application") {
-//                useModule("com.android.tools.build:gradle:${requested.version}")
-//            }
-//        }
-//    }
+    /*resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == "com.android.library") {
+                useModule("com.android.tools.build:gradle:7.1.3")
+            }
+            if (requested.id.id == "com.android.application") {
+                useModule("com.android.tools.build:gradle:7.1.3")
+            }
+            if (requested.id.id == "org.jetbrains.kotlin.android") {
+                useModule("org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10")
+            }
+            if (requested.id.namespace == "com.huawei.agconnect") {
+                println(">> ${requested.id.id}")
+                if (requested.id.id == "com.huawei.agconnect.agcp") {
+                    useModule("com.huawei.agconnect:agcp:1.6.3.300")
+                }
+                println(">> $target")
+            } else {
+                println(">  $target")
+            }
+        }
+    }*/
     repositories {
         gradlePluginPortal()
         google()
@@ -32,3 +44,4 @@ dependencyResolutionManagement {
 rootProject.name = "RortyCompose.V2"
 include(":app")
 include(":libraries:framework")
+include(":libraries:jetframework")

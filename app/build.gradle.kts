@@ -9,6 +9,15 @@ plugins {
     id("dagger.hilt.android.plugin")
 }
 
+if (file("google-services.json").exists()) {
+    apply(plugin = "com.google.gms.google-services")
+    apply(plugin = "com.google.firebase.crashlytics")
+}
+
+//if (file("agconnect-services.json").exists()) {
+//    apply(plugin = "com.huawei.agconnect")
+//}
+
 android {
     compileSdk = 32
 
@@ -26,6 +35,7 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -86,6 +96,9 @@ android.applicationVariants.all {
 }
 
 dependencies {
+    implementation(project(mapOf("path" to ":libraries:framework")))
+    implementation(project(mapOf("path" to ":libraries:jetframework")))
+
     implementation("androidx.core:core-ktx:1.7.0")
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("com.google.android.material:material:1.5.0")
@@ -148,7 +161,7 @@ dependencies {
     implementation("androidx.datastore:datastore:1.0.0")
     implementation("androidx.security:security-crypto-ktx:1.1.0-alpha03")
 
-    /*// Firebase
+    // Firebase
     implementation("com.google.android.gms:play-services-base:18.0.1")
     implementation("com.google.firebase:firebase-analytics-ktx:20.1.2")
     implementation("com.google.firebase:firebase-crashlytics-ktx:18.2.9")
@@ -156,25 +169,23 @@ dependencies {
     implementation("com.google.firebase:firebase-config-ktx:21.0.2")
 
     // Huawei
-    implementation("com.huawei.agconnect:agconnect-core:1.6.4.300")
-    implementation("com.huawei.hms:base:6.3.0.300")
-    implementation("com.huawei.hms:hianalytics:6.3.2.300")
-    implementation("com.huawei.agconnect:agconnect-crash:1.6.0.300")
-    implementation("com.huawei.hms:push:6.1.0.300")
-    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.4.300")*/
+//    implementation("com.huawei.agconnect:agconnect-core:1.6.4.300")
+//    implementation("com.huawei.hms:base:6.3.0.300")
+//    implementation("com.huawei.hms:hianalytics:6.3.2.300")
+//    implementation("com.huawei.agconnect:agconnect-crash:1.6.0.300")
+//    implementation("com.huawei.hms:push:6.1.0.300")
+//    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.4.300")
 
     // Core
     implementation("androidx.core:core-splashscreen:1.0.0-beta02")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("androidx.paging:paging-runtime-ktx:3.1.1")
     implementation("com.github.ireward:compose-html:1.0.2")
-    //debugImplementation("com.amitshekhar.android:debug-db:1.0.6")
 
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.41")
     kapt("com.google.dagger:hilt-android-compiler:2.41")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
-    //implementation("androidx.hilt:hilt-work:1.0.0")
 
     // Test
     testImplementation(TestingLib.Junit)
