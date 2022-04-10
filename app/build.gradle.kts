@@ -14,9 +14,9 @@ if (file("google-services.json").exists()) {
     apply(plugin = "com.google.firebase.crashlytics")
 }
 
-//if (file("agconnect-services.json").exists()) {
-//    apply(plugin = "com.huawei.agconnect")
-//}
+if (file("agconnect-services.json").exists()) {
+    apply(plugin = "com.huawei.agconnect")
+}
 
 android {
     compileSdk = 32
@@ -169,12 +169,12 @@ dependencies {
     implementation("com.google.firebase:firebase-config-ktx:21.0.2")
 
     // Huawei
-//    implementation("com.huawei.agconnect:agconnect-core:1.6.4.300")
-//    implementation("com.huawei.hms:base:6.3.0.300")
-//    implementation("com.huawei.hms:hianalytics:6.3.2.300")
-//    implementation("com.huawei.agconnect:agconnect-crash:1.6.0.300")
-//    implementation("com.huawei.hms:push:6.1.0.300")
-//    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.4.300")
+    implementation("com.huawei.agconnect:agconnect-core:1.6.4.300")
+    implementation("com.huawei.hms:base:6.3.0.300")
+    implementation("com.huawei.hms:hianalytics:6.3.2.300")
+    implementation("com.huawei.agconnect:agconnect-crash:1.6.0.300")
+    implementation("com.huawei.hms:push:6.1.0.300")
+    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.4.300")
 
     // Core
     implementation("androidx.core:core-splashscreen:1.0.0-beta02")
