@@ -3,7 +3,7 @@ package extensions
 import org.gradle.api.Project
 import java.io.File
 
-fun Project.prop(propertyName: String, defaultValue: Any): Any {
+fun Project.propOrDef(propertyName: String, defaultValue: Any): Any {
     return project.properties[propertyName] ?: (System.getenv(propertyName)
         ?: defaultValue)
 }
@@ -16,4 +16,8 @@ fun Project.getFile(vararg fileNames: String): File? {
         }
     }
     return null
+}
+
+fun Project.propertyOrEmpty(name: String): String {
+    return findProperty(name) as String? ?: ""
 }

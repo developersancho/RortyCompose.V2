@@ -1,4 +1,7 @@
 import com.developersancho.buildsrc.*
+import extensions.propOrDef
+import extensions.propertyOrEmpty
+import extensions.setSigningConfigs
 
 plugins {
     id("com.android.application")
@@ -33,10 +36,30 @@ android {
         vectorDrawables.useSupportLibrary = true
     }
 
+    setSigningConfigs(project)
+
+//    signingConfigs {
+//        create("signingConfigRelease") {
+//            storeFile = rootProject.file("signing/rortycompose-release.jks")
+//            keyAlias = "rortycompose"
+//            storePassword = "123456"
+//            keyPassword = "123456"
+//        }
+//
+//        getByName("debug") {
+//            storeFile = rootProject.file("signing/debug.keystore")
+//            keyAlias = "androiddebugkey"
+//            keyPassword = "android"
+//            storePassword = "android"
+//        }
+//    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("signingConfigRelease")
             isMinifyEnabled = true
             isShrinkResources = true
+            isDebuggable = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -46,6 +69,12 @@ android {
         }
 
         debug {
+            signingConfig = signingConfigs.getByName("debug")
+            isTestCoverageEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
             buildConfigField("String", "BASE_URL", "\"${Configs.Debug.BaseUrl}\"")
             buildConfigField("String", "DB_NAME", "\"${Configs.Debug.DbName}\"")
         }
