@@ -9,13 +9,13 @@ import androidx.compose.material.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.developersancho.jetframework.htmltext.HtmlText
 import com.developersancho.rortycompose.R
 import com.developersancho.rortycompose.app.theme.JetRortyColors
 import com.developersancho.rortycompose.app.theme.JetRortyTypography
 import com.developersancho.rortycompose.app.theme.cardBackgroundColor
 import com.developersancho.rortycompose.app.widget.JRToolbarWithNavIcon
 import com.developersancho.rortycompose.provider.NavigationProvider
-import com.ireward.htmlcompose.HtmlText
 import com.ramcosta.composedestinations.annotation.Destination
 
 @Destination

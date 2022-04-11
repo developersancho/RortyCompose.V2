@@ -6,12 +6,12 @@ plugins {
 }
 
 android {
-    compileSdk = 32
+    compileSdk = Configs.CompileSdk
 
     defaultConfig {
-        minSdk = 23
-        targetSdk = 32
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        minSdk = Configs.MinSdk
+        targetSdk = Configs.TargetSdk
+        testInstrumentationRunner = Configs.AndroidJunitRunner
         consumerProguardFiles("consumer-rules.pro")
     }
 
