@@ -8,6 +8,8 @@ import com.developersancho.framework.base.app.TimberInitializer
 import com.developersancho.framework.pref.CacheManager
 import com.developersancho.rortycompose.app.JetNetworkConfig
 import com.developersancho.rortycompose.app.JetRortyApp
+import com.developersancho.rortycompose.app.tools.Analytics
+import com.developersancho.rortycompose.app.tools.RortyAnalytics
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -48,5 +50,11 @@ class AppModule {
         timberInitializer: TimberInitializer
     ): AppInitializer {
         return AppInitializerImpl(timberInitializer)
+    }
+
+    @Provides
+    @Singleton
+    fun provideRortyAnalytics(@ApplicationContext context: Context): Analytics {
+        return RortyAnalytics(context)
     }
 }
