@@ -1,6 +1,4 @@
 import com.developersancho.buildsrc.*
-import extensions.propOrDef
-import extensions.propertyOrEmpty
 import extensions.setSigningConfigs
 
 plugins {

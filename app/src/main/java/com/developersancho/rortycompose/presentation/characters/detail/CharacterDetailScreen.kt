@@ -78,7 +78,6 @@ fun CharacterDetailScreenPreview() {
     JetRortyTheme {
         Surface {
             CharacterDetailBody {
-
             }
         }
     }

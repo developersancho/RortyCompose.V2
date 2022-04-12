@@ -48,7 +48,6 @@ fun SettingsScreenPreview() {
     JetRortyTheme {
         Surface {
             SettingsBody {
-
             }
         }
     }

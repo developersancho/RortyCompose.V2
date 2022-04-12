@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.map
 import java.io.IOException
 import javax.inject.Inject
 
-class LanguageRepository  @Inject constructor(context: Context) {
+class LanguageRepository @Inject constructor(context: Context) {
     private val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = "language_pref")
     private val defaultLanguage = "en"
 

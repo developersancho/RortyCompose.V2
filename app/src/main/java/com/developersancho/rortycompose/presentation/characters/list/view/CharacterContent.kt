@@ -52,7 +52,8 @@ fun CharacterContent(
                         CharacterRow(
                             viewModel,
                             dto = it,
-                            onDetailClick = { selectItem.invoke(it.id.orZero()) })
+                            onDetailClick = { selectItem.invoke(it.id.orZero()) }
+                        )
                     }
                 }
 

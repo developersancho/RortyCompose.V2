@@ -99,7 +99,8 @@ private fun LocationTab(
                     modifier = Modifier
                         .tabIndicatorOffset(tabPositions[selectedIndex.value])
                 )
-            }) {
+            }
+        ) {
             tabsName.forEachIndexed { index, stringResourceId ->
                 Tab(
                     selected = index == selectedIndex.value,
@@ -246,7 +247,6 @@ private fun LocationsBody(
 fun LocationsScreenPreview() {
     JetRortyTheme {
         Surface {
-
         }
     }
 }

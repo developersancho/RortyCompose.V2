@@ -16,7 +16,7 @@ data class LocationEntity(
     @ColumnInfo(name = COLUMN_CREATED) val created: String,
     @ColumnInfo(name = COLUMN_TYPE) val type: String,
     @ColumnInfo(name = COLUMN_RESIDENTS) val residents: List<String>
-){
+) {
     companion object {
         const val TABLE_NAME = "location_favorite"
         const val COLUMN_ID = "id"

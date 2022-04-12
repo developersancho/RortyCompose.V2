@@ -19,5 +19,4 @@ class SaveOnBoarding @Inject constructor(
         repository.saveOnBoardingState(params.completed)
         emit(Unit)
     }
-
 }

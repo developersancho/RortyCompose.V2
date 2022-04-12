@@ -6,7 +6,7 @@ import com.developersancho.framework.room.dao.BaseDao
 import com.developersancho.rortycompose.data.model.local.episode.EpisodeEntity
 
 @Dao
-interface EpisodeFavoriteDao: BaseDao<EpisodeEntity> {
+interface EpisodeFavoriteDao : BaseDao<EpisodeEntity> {
     @Query("SELECT * FROM ${EpisodeEntity.TABLE_NAME}")
     suspend fun getFavoriteList(): List<EpisodeEntity>
 

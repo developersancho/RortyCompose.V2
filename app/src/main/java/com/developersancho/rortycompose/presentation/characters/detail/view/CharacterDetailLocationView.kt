@@ -140,5 +140,3 @@ fun CharacterDetailLocationViewPreview() {
         }
     }
 }
-
-

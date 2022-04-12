@@ -9,5 +9,4 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(private val themeProvider: ThemeProvider) : ViewModel() {
 
     fun themeProvider() = themeProvider
-
 }

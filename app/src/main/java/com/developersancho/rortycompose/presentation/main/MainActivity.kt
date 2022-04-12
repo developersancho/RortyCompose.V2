@@ -61,7 +61,7 @@ fun SegmentedDemo() {
             twoSegments,
             selectedTwoSegment,
             onSegmentSelected = { selectedTwoSegment = it },
-            //modifier = Modifier.background(JetRortyColors, JetRortyShapes.medium)
+            // modifier = Modifier.background(JetRortyColors, JetRortyShapes.medium)
         ) {
             SegmentText(it)
         }

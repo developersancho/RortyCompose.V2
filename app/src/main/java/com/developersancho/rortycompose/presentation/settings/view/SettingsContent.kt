@@ -1,3 +1,5 @@
+@file:Suppress("LongMethod")
+
 package com.developersancho.rortycompose.presentation.settings.view
 
 import androidx.compose.foundation.layout.*
@@ -119,9 +121,9 @@ fun SettingsContent(
                         }
                         .clickableSingle {
                             if (context.isHMS()) {
-
+                                print("")
                             } else {
-
+                                print("")
                             }
                         }
                 )
@@ -147,9 +149,9 @@ fun SettingsContent(
                         }
                         .clickableSingle {
                             if (context.isHMS()) {
-
+                                print("")
                             } else {
-
+                                print("")
                             }
                         }
                 )
@@ -165,14 +167,16 @@ fun SettingsContent(
                         }
                 )
 
-                Row(modifier = Modifier
-                    .constrainAs(lblTermAndPrivacy) {
-                        top.linkTo(viewDivider3.bottom)
-                        start.linkTo(parent.start)
-                    }
-                    .clickableSingle {
-                        navigator?.openTermAndPrivacy()
-                    }) {
+                Row(
+                    modifier = Modifier
+                        .constrainAs(lblTermAndPrivacy) {
+                            top.linkTo(viewDivider3.bottom)
+                            start.linkTo(parent.start)
+                        }
+                        .clickableSingle {
+                            navigator?.openTermAndPrivacy()
+                        }
+                ) {
                     Text(
                         text = stringResource(id = R.string.text_term_and_privacy),
                         style = JetRortyTypography.body2,
@@ -201,14 +205,16 @@ fun SettingsContent(
                         }
                 )
 
-                Row(modifier = Modifier
-                    .constrainAs(lblAppLanguage) {
-                        top.linkTo(viewDivider4.bottom)
-                        start.linkTo(parent.start)
-                    }
-                    .clickableSingle {
-                        navigator?.openAppLanguage()
-                    }) {
+                Row(
+                    modifier = Modifier
+                        .constrainAs(lblAppLanguage) {
+                            top.linkTo(viewDivider4.bottom)
+                            start.linkTo(parent.start)
+                        }
+                        .clickableSingle {
+                            navigator?.openAppLanguage()
+                        }
+                ) {
                     Text(
                         text = stringResource(id = R.string.text_app_language),
                         style = JetRortyTypography.body2,
@@ -237,14 +243,15 @@ fun SettingsContent(
                         }
                 )
 
-                Row(modifier = Modifier
-                    .constrainAs(lblAbout) {
-                        top.linkTo(viewDivider5.bottom)
-                        start.linkTo(parent.start)
-                    }
-                    .clickableSingle {
-                        navigator?.openAbout()
-                    }
+                Row(
+                    modifier = Modifier
+                        .constrainAs(lblAbout) {
+                            top.linkTo(viewDivider5.bottom)
+                            start.linkTo(parent.start)
+                        }
+                        .clickableSingle {
+                            navigator?.openAbout()
+                        }
                 ) {
                     Text(
                         text = stringResource(id = R.string.text_about),

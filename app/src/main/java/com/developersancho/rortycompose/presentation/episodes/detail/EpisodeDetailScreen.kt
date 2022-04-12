@@ -84,7 +84,6 @@ fun EpisodeDetailScreenPreview() {
             color = JetRortyColors.background
         ) {
             EpisodeDetailBody {
-
             }
         }
     }

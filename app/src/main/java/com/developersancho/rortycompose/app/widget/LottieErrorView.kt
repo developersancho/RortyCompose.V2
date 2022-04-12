@@ -16,10 +16,8 @@ import com.developersancho.rortycompose.app.theme.JetRortyTheme
 import com.developersancho.rortycompose.R
 import com.developersancho.rortycompose.app.component.LottieView
 
-
 @Composable
 fun LottieErrorView(modifier: Modifier = Modifier, e: Throwable, action: () -> Unit) {
-
     Column(
         modifier = modifier
             .fillMaxSize()

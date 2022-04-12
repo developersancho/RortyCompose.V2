@@ -99,7 +99,8 @@ private fun EpisodeTab(
                     modifier = Modifier
                         .tabIndicatorOffset(tabPositions[selectedIndex.value])
                 )
-            }) {
+            }
+        ) {
             tabsName.forEachIndexed { index, stringResourceId ->
                 Tab(
                     selected = index == selectedIndex.value,
@@ -216,7 +217,6 @@ private fun FavoritesPage(
         viewModel.onTriggerEvent(EpisodesEvent.LoadFavorites)
     })
 }
-
 
 @Composable
 private fun EpisodesBody(

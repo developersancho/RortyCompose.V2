@@ -67,7 +67,6 @@ fun AboutScreen(
                         verticalArrangement = Arrangement.Top,
                         horizontalAlignment = Alignment.CenterHorizontally
                     ) {
-
                         Image(
                             painter = painterResource(id = R.drawable.ic_profile),
                             contentDescription = null,
@@ -138,7 +137,6 @@ fun AboutScreenPreview() {
                     verticalArrangement = Arrangement.Top,
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
-
                     Image(
                         painter = painterResource(id = R.drawable.ic_profile),
                         contentDescription = null,
@@ -169,7 +167,6 @@ fun AboutScreenPreview() {
                         text = AnnotatedString(text = "https://github.com/developersancho"),
                         style = JetRortyTypography.h6,
                         onClick = {
-
                         }
                     )
                     SmallSpacer()
@@ -177,7 +174,6 @@ fun AboutScreenPreview() {
                         text = AnnotatedString(text = "https://medium.com/@developersancho"),
                         style = JetRortyTypography.h6,
                         onClick = {
-
                         }
                     )
                 }

@@ -43,7 +43,8 @@ fun CharactersScreen(
     val coroutineScope = rememberCoroutineScope()
     val selectedFavorite = remember { mutableStateOf(CharacterDto.init()) }
 
-    CharactersBody(modifier, bottomSheetState,
+    CharactersBody(
+        modifier, bottomSheetState,
         sheetContent = {
             FavoriteBottomSheetContent(
                 character = selectedFavorite.value,
@@ -59,7 +60,8 @@ fun CharactersScreen(
                     }
                 }
             )
-        }) { padding ->
+        }
+    ) { padding ->
         Column {
             val tabsName = remember { CharacterTabs.values().map { it.value } }
             val selectedIndex = rememberSaveable { mutableStateOf(CharacterTabs.LIST.ordinal) }
@@ -73,7 +75,8 @@ fun CharactersScreen(
                         modifier = Modifier
                             .tabIndicatorOffset(tabPositions[selectedIndex.value])
                     )
-                }) {
+                }
+            ) {
                 tabsName.forEachIndexed { index, stringResourceId ->
                     Tab(
                         selected = index == selectedIndex.value,
@@ -191,7 +194,6 @@ private fun FavoritesPage(
         viewModel.onTriggerEvent(CharactersEvent.LoadFavorites)
     })
 }
-
 
 @Composable
 private fun CharactersBody(

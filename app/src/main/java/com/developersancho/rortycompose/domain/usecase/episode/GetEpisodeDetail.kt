@@ -35,7 +35,7 @@ constructor(
             episodeRepo.getEpisode(params.detailId.orZero()).toEpisodeDto()
         }
         val service = apiCall { getEpisode }
-        service.map { dto->
+        service.map { dto ->
             val favorite = episodeRepo.getFavorite(dto.id.orZero())
             dto.isFavorite = favorite != null
 
