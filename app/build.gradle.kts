@@ -69,6 +69,7 @@ android {
         debug {
             signingConfig = signingConfigs.getByName("debug")
             isTestCoverageEnabled = true
+            isDebuggable = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
