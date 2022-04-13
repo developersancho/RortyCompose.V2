@@ -21,7 +21,7 @@ class StartViewModel @Inject constructor(
 
     private fun readOnBoardingState() = safeLaunch {
         call(readOnBoarding(Unit)) { completed ->
-            _startWelcome.value = false // !completed
+            _startWelcome.value = !completed
         }
     }
 }
