@@ -27,5 +27,4 @@ fun TrackScreenView(screenName: String, className: String) {
         param(FirebaseAnalytics.Param.SCREEN_NAME, screenName)
         param(FirebaseAnalytics.Param.SCREEN_CLASS, className)
     }
-
 }
