@@ -13,6 +13,8 @@ plugins {
 
 apply<codequality.DependencyUpdatePlugin>()
 
+apply(from = "git-hooks/githooks.gradle")
+
 tasks.withType<Test> {
     useJUnitPlatform()
 }
@@ -27,4 +29,9 @@ val buildTests by tasks.registering {
 
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
+}
+
+afterEvaluate {
+    // We install the hook at the first occasion
+    tasks["clean"].dependsOn("installGitHooks")
 }
