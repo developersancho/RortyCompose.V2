@@ -208,7 +208,7 @@ This project uses many of the popular libraries, plugins and tools of the androi
 - [Detekt](https://github.com/detekt/detekt) - Static code analysis for Kotlin.
 
 ## 🚀 Posts In Medium
-[Article](https://developersancho.medium.com/jetpack-compose-modular-clean-architecture-with-rorty-app-58d801571ab9)
+[Article](https://blog.devgenius.io/jetpack-compose-clean-architecture-with-rorty-app-e7532da06719)
 
 ## 🤝 Contributing
 
