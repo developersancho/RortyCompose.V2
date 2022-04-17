@@ -3,9 +3,12 @@
     <base-config
         cleartextTrafficPermitted="true"
         tools:ignore="InsecureBaseConfiguration" />
-    <!-- <domain-config cleartextTrafficPermitted="true">
-         <domain includeSubdomains="true">localhost</domain>
-         <domain includeSubdomains="true">10.0.2.2</domain>
-         <domain includeSubdomains="true">127.0.0.1</domain>
-     </domain-config>-->
+<!--    <domain-config cleartextTrafficPermitted="true">-->
+<!--        <domain includeSubdomains="true">localhost</domain>-->
+<!--        <domain includeSubdomains="true">10.0.2.2</domain>-->
+<!--        <domain includeSubdomains="true">127.0.0.1</domain>-->
+<!--        <trust-anchors>-->
+<!--            <certificates src="@raw/my_ca" />-->
+<!--        </trust-anchors>-->
+<!--    </domain-config>-->
 </network-security-config>

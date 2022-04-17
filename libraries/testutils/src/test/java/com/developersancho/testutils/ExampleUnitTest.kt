@@ -1,4 +1,4 @@
-package com.developersancho.rortycompose
+package com.developersancho.testutils
 
 import org.junit.Test
 

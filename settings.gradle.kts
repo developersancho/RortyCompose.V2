@@ -42,3 +42,4 @@ rootProject.name = "RortyCompose.V2"
 include(":app")
 include(":libraries:framework")
 include(":libraries:jetframework")
+include(":libraries:testutils")

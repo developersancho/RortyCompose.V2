@@ -17,6 +17,7 @@ apply(from = "git-hooks/githooks.gradle")
 
 tasks.withType<Test> {
     useJUnitPlatform()
+    jvmArgs = listOf("-noverify")
 }
 
 val testJvm by tasks.registering {

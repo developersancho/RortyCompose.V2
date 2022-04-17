@@ -18,3 +18,4 @@ local.properties
 /.idea/misc.xml
 /.idea/vcs.xml
 /.idea/kotlinScripting.xml
+/app/jacoco.exec

@@ -102,6 +102,12 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1,gradle-plugins}"
         }
     }
+
+    testOptions {
+        unitTests {
+            isIncludeAndroidResources = true
+        }
+    }
 }
 
 android.applicationVariants.all {
@@ -167,7 +173,7 @@ dependencies {
     implementation(NetworkLib.RetrofitMoshi)
     implementation(NetworkLib.Okhttp)
     implementation(NetworkLib.LoggingInterceptor)
-    testImplementation(TestingLib.Okhttp)
+    // testImplementation(TestingLib.Okhttp)
     debugImplementation(NetworkLib.ChuckerDebug)
     releaseImplementation(NetworkLib.ChuckerRelease)
 
@@ -204,12 +210,13 @@ dependencies {
     implementation(DaggerHiltLib.Compose)
 
     // Test
-    testImplementation(TestingLib.Junit)
-    androidTestImplementation(AndroidTestingLib.JunitExt)
-    androidTestImplementation(AndroidTestingLib.EspressoCore)
-    testImplementation(TestingLib.Coroutine)
-    testImplementation(TestingLib.Truth)
-    testImplementation(TestingLib.Robolectric)
-    testImplementation(TestingLib.Turbine)
-    testImplementation(TestingLib.Mockk)
+    testImplementation(project(mapOf("path" to ":libraries:testutils")))
+//    testImplementation(TestingLib.Junit)
+//    androidTestImplementation(AndroidTestingLib.JunitExt)
+//    androidTestImplementation(AndroidTestingLib.EspressoCore)
+//    testImplementation(TestingLib.Coroutine)
+//    testImplementation(TestingLib.Truth)
+//    testImplementation(TestingLib.Robolectric)
+//    testImplementation(TestingLib.Turbine)
+//    testImplementation(TestingLib.Mockk)
 }

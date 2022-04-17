@@ -9,8 +9,8 @@ object SupportLib {
     const val CoreKtx = "androidx.core:core-ktx:${Versions.CoreKtx}"
     const val Appcompat = "androidx.appcompat:appcompat:1.4.1"
     const val Material = "com.google.android.material:material:1.5.0"
-    const val CoroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.0"
-    const val CoroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
+    const val CoroutineCore = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1"
+    const val CoroutineAndroid = "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
     const val LifecycleRuntime = "androidx.lifecycle:lifecycle-runtime-ktx:2.4.1"
 
     const val Splashscreen = "androidx.core:core-splashscreen:1.0.0-beta02"
@@ -54,7 +54,7 @@ object AccompanistLib {
     const val Permissions = "com.google.accompanist:accompanist-permissions:0.23.1"
     const val Pager = "com.google.accompanist:accompanist-pager:0.23.1"
     const val Indicators = "com.google.accompanist:accompanist-pager-indicators:0.23.1"
-    const val Webview = "com.google.accompanist:accompanist-webview:0.24.4-alpha"
+    const val Webview = "com.google.accompanist:accompanist-webview:0.24.6-alpha"
 }
 
 object NetworkLib {
@@ -63,8 +63,8 @@ object NetworkLib {
     const val MoshiLazyAdapter = "com.serjltt.moshi:moshi-lazy-adapters:2.2"
     const val Retrofit = "com.squareup.retrofit2:retrofit:2.9.0"
     const val RetrofitMoshi = "com.squareup.retrofit2:converter-moshi:2.9.0"
-    const val Okhttp = "com.squareup.okhttp3:okhttp:5.0.0-alpha.5"
-    const val LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.5"
+    const val Okhttp = "com.squareup.okhttp3:okhttp:5.0.0-alpha.6"
+    const val LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.6"
     const val ChuckerDebug = "com.github.chuckerteam.chucker:library:3.5.2"
     const val ChuckerRelease = "com.github.chuckerteam.chucker:library-no-op:3.5.2"
 
@@ -85,17 +85,17 @@ object FirebaseLib {
     const val Base = "com.google.android.gms:play-services-base:18.0.1"
     const val Analytic = "com.google.firebase:firebase-analytics-ktx:20.1.2"
     const val Crashlytics = "com.google.firebase:firebase-crashlytics-ktx:18.2.9"
-    const val Push = "com.google.firebase:firebase-messaging-ktx:23.0.2"
+    const val Push = "com.google.firebase:firebase-messaging-ktx:23.0.3"
     const val Config = "com.google.firebase:firebase-config-ktx:21.0.2"
 }
 
 object HuaweiLib {
     const val Core = "com.huawei.agconnect:agconnect-core:1.6.4.300"
-    const val Base = "com.huawei.hms:base:6.3.0.300"
-    const val Analytic = "com.huawei.hms:hianalytics:6.3.2.300"
-    const val Crashlytics = "com.huawei.agconnect:agconnect-crash:1.6.0.300"
-    const val Push = "com.huawei.hms:push:6.1.0.300"
-    const val Config = "com.huawei.agconnect:agconnect-remoteconfig:1.6.4.300"
+    const val Base = "com.huawei.hms:base:6.4.0.303"
+    const val Analytic = "com.huawei.hms:hianalytics:6.4.1.302"
+    const val Crashlytics = "com.huawei.agconnect:agconnect-crash:1.6.5.300"
+    const val Push = "com.huawei.hms:push:6.3.0.304"
+    const val Config = "com.huawei.agconnect:agconnect-remoteconfig:1.6.5.300"
 }
 
 object DaggerHiltLib {
@@ -106,12 +106,12 @@ object DaggerHiltLib {
 
 object TestingLib {
     const val Junit = "junit:junit:4.13.2"
-    const val Coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
+    const val Coroutine = "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1"
     const val Truth = "com.google.truth:truth:1.1.3"
     const val Robolectric = "org.robolectric:robolectric:4.7.3"
     const val Turbine = "app.cash.turbine:turbine:0.7.0"
-    const val Mockk = "io.mockk:mockk:1.12.2"
-    const val Okhttp = "com.squareup.okhttp3:mockwebserver:5.0.0-alpha.5"
+    const val Mockk = "io.mockk:mockk:1.12.3"
+    const val Okhttp = "com.squareup.okhttp3:mockwebserver:5.0.0-alpha.6"
 }
 
 object AndroidTestingLib {
