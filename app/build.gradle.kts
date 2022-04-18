@@ -9,6 +9,7 @@ plugins {
     id("org.jetbrains.kotlin.kapt")
     id("dagger.hilt.android.plugin")
     id("codeanalyzetools.quality")
+    id("codeanalyzetools.jacoco-report")
 }
 
 if (file("google-services.json").exists()) {
@@ -68,7 +69,8 @@ android {
 
         debug {
             signingConfig = signingConfigs.getByName("debug")
-            isTestCoverageEnabled = true
+//            To get coverage reports for instrumented test set isTestCoverageEnabled flag to true
+            isTestCoverageEnabled = false
             isDebuggable = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

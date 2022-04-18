@@ -8,25 +8,13 @@ buildscript {
 
 plugins {
     id("com.google.devtools.ksp") version "1.6.10-1.0.4" apply false
-    //id("codeanalyzetools.version-check")
 }
 
 apply<codequality.DependencyUpdatePlugin>()
 
 apply(from = "git-hooks/githooks.gradle")
 
-tasks.withType<Test> {
-    useJUnitPlatform()
-    jvmArgs = listOf("-noverify")
-}
-
-val testJvm by tasks.registering {
-    dependsOn("test")
-}
-
-val buildTests by tasks.registering {
-    dependsOn("testClasses")
-}
+apply(plugin = "codeanalyzetools.jacoco-multi-report")
 
 tasks.register("clean", Delete::class) {
     delete(rootProject.buildDir)
