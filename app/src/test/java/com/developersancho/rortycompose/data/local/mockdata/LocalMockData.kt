@@ -41,7 +41,7 @@ object LocalMockData {
     fun getEpisodeFavoriteList(): List<EpisodeEntity> {
         return listOf(
             EpisodeEntity(
-                id = 28,
+                id = 1,
                 name = "The Ricklantis Mixup",
                 url = "https://rickandmortyapi.com/api/episode/28",
                 airDate = "September 10, 2017",
@@ -70,7 +70,7 @@ object LocalMockData {
     fun getLocationFavoriteList(): List<LocationEntity> {
         return listOf(
             LocationEntity(
-                id = 3,
+                id = 1,
                 name = "Citadel of Ricks",
                 url = "https://rickandmortyapi.com/api/location/3",
                 dimension = "unknown",

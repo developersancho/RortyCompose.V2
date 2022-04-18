@@ -94,8 +94,8 @@ dependencies {
 
     // Huawei
     implementation("com.huawei.hms:base:6.4.0.303")
-    implementation("com.huawei.hms:hianalytics:6.4.1.302")
-    implementation("com.huawei.agconnect:agconnect-crash:1.6.5.300")
-    implementation("com.huawei.hms:push:6.3.0.304")
-    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.5.300")
+//    implementation("com.huawei.hms:hianalytics:6.4.1.302")
+//    implementation("com.huawei.agconnect:agconnect-crash:1.6.5.300")
+//    implementation("com.huawei.hms:push:6.3.0.304")
+//    implementation("com.huawei.agconnect:agconnect-remoteconfig:1.6.5.300")
 }

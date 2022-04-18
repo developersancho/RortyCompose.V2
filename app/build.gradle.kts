@@ -196,10 +196,11 @@ dependencies {
     // Huawei
     implementation(HuaweiLib.Base)
     implementation(HuaweiLib.Core)
-    implementation(HuaweiLib.Analytic)
-    implementation(HuaweiLib.Crashlytics)
+    // xxx Analytic RoboElectric'i patlatıyor xxx
+    // implementation(HuaweiLib.Analytic)
+//    implementation(HuaweiLib.Crashlytics)
     implementation(HuaweiLib.Push)
-    implementation(HuaweiLib.Config)
+//    implementation(HuaweiLib.Config)
 
     // Core
     implementation(SupportLib.Splashscreen)
