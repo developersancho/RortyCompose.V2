@@ -14,9 +14,7 @@ import com.developersancho.rortycompose.data.repository.episode.EpisodeRepositor
 import kotlinx.coroutines.flow.FlowCollector
 import javax.inject.Inject
 
-class GetEpisodeDetail
-@Inject
-constructor(
+class GetEpisodeDetail @Inject constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val episodeRepo: EpisodeRepository,
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)

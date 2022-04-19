@@ -1,9 +1,13 @@
 package com.developersancho.rortycompose.domain.mockdata
 
 import com.developersancho.rortycompose.data.model.dto.character.CharacterDto
+import com.developersancho.rortycompose.data.model.dto.episode.EpisodeDto
+import com.developersancho.rortycompose.data.model.dto.location.LocationDto
 import com.developersancho.rortycompose.data.model.remote.base.PageInfo
 import com.developersancho.rortycompose.data.model.remote.base.Status
 import com.developersancho.rortycompose.data.model.remote.character.CharacterResponse
+import com.developersancho.rortycompose.data.model.remote.episode.EpisodeResponse
+import com.developersancho.rortycompose.data.model.remote.location.LocationResponse
 
 object MockData {
 
@@ -68,5 +72,27 @@ object MockData {
                 episodes = emptyList()
             )
         )
+    }
+
+    fun getEpisodeResponse(): EpisodeResponse {
+        return EpisodeResponse(
+            pageInfo = PageInfo(1, null, 20, null),
+            results = listOf()
+        )
+    }
+
+    fun getEpisodeDto(): EpisodeDto {
+        return EpisodeDto.init()
+    }
+
+    fun getLocationResponse(): LocationResponse {
+        return LocationResponse(
+            pageInfo = PageInfo(1, null, 20, null),
+            results = listOf()
+        )
+    }
+
+    fun getLocationDto(): LocationDto {
+        return LocationDto.init()
     }
 }

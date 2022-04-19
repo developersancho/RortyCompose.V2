@@ -14,9 +14,7 @@ import com.developersancho.rortycompose.data.repository.location.LocationReposit
 import kotlinx.coroutines.flow.FlowCollector
 import javax.inject.Inject
 
-class GetLocationDetail
-@Inject
-constructor(
+class GetLocationDetail @Inject constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val locRepo: LocationRepository,
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
