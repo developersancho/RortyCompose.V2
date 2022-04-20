@@ -85,6 +85,12 @@ object MockData {
         return EpisodeDto.init()
     }
 
+    fun getEpisodeDtoList(): List<EpisodeDto> {
+        return listOf(
+            EpisodeDto.init()
+        )
+    }
+
     fun getLocationResponse(): LocationResponse {
         return LocationResponse(
             pageInfo = PageInfo(1, null, 20, null),
@@ -94,5 +100,11 @@ object MockData {
 
     fun getLocationDto(): LocationDto {
         return LocationDto.init()
+    }
+
+    fun getLocationDtoList(): List<LocationDto> {
+        return listOf(
+            LocationDto.init()
+        )
     }
 }

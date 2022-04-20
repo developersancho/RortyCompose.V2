@@ -14,9 +14,7 @@ import com.developersancho.rortycompose.data.repository.episode.EpisodeRepositor
 import kotlinx.coroutines.flow.FlowCollector
 import javax.inject.Inject
 
-class GetCharacterDetail
-@Inject
-constructor(
+class GetCharacterDetail @Inject constructor(
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)
     internal val charRepo: CharacterRepository,
     @get:VisibleForTesting(otherwise = VisibleForTesting.PROTECTED)

@@ -15,7 +15,7 @@ import org.gradle.testing.jacoco.tasks.JacocoReportsContainer
 plugins.apply(JacocoPlugin::class)
 
 configure<JacocoPluginExtension> {
-    toolVersion = "0.8.7"
+    toolVersion = "0.8.8"
 }
 
 tasks.withType<Test> {
@@ -52,6 +52,21 @@ val fileFilter = listOf(
     "**/*Application.*",
     "**/*Activity.*",
     "**/*Fragment.*",
+    "**/*Destination*.*",
+    "**/*Screen*.*",
+    "**/*Page*.*",
+    "**/*Body*.*",
+    "**/*Content*.*",
+    "**/*View*.*",
+    "**/*Row*.*",
+    "**/com/developersancho/rortycompose/app/*",
+    "**/com/developersancho/rortycompose/provider/*",
+    "**/com/developersancho/rortycompose/presentation/**/**/view/*",
+    "**/com/developersancho/rortycompose/presentation/welcome/*",
+    "**/com/developersancho/rortycompose/presentation/splash/*",
+    "**/com/developersancho/rortycompose/presentation/main/*",
+    "**/com/developersancho/rortycompose/presentation/home/*",
+    "**/com/developersancho/rortycompose/presentation/settings/*",
 )
 
 private val classDirectoriesTree = fileTree(project.buildDir) {
